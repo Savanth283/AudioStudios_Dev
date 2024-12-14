@@ -1,0 +1,57 @@
+.stuido__card {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+    .caption {  
+        .title__box {
+            width: calc(100% - 50px);
+        }
+        .icon__box {
+            width: 50px;
+        }
+        .info__list {
+            .info__text {
+                line-height: 1.25;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .stuido__card { 
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+
+        .caption {  
+            .title__box {
+                width: 100%;
+                border-bottom: 1px solid var(--color-border-color);
+                padding-bottom: 8px;
+            }
+            .rating__box {
+                position: absolute;
+            }
+            .icon__box {
+                width: 30px;
+                position: absolute;
+                top: calc(100% + 7px);
+                right: 0;
+            }
+            .price__box {
+                width: calc(100% - 34px);
+
+                .price { font-size:13px; }
+                .ptext { font-size:10px; }
+            }
+
+            .info__list {
+                .info__icon { font-size: 12px;width: 15px }
+                .info__text { font-size: 10px;width: calc(100% - 15px);padding-left:4px;line-height: 1.2; }
+            }
+            .distance { font-size: 11px; }
+        }
+
+    }
+    
+     
+}

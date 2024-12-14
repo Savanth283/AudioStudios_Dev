@@ -1,0 +1,36 @@
+
+.auth__layout {
+    background-image: url('/images/auth-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .left__bordered__box {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 5px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            background-color: var(--color-_green);
+            border-radius: 10px;
+        }
+    }
+
+    .input_feild {
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        background-position: center left 1rem;
+        padding-left: 3rem;
+        background-color: var(--color-gray-light);
+    }
+
+    input[type="checkbox"] { 
+        border: 1px solid var(--color-border-color); 
+        background-color: var(--color-gray-light);
+    }
+}

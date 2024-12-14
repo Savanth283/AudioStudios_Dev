@@ -1,0 +1,34 @@
+services:
+  - docker:dind
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - live
+
+  variables:
+    # Set the variables specific to your project
+    DOCKER_IMAGE_NAME: "$LIVE_DOCKER_IMAGE_NAME"
+    REMOTE_SERVER: "$LIVE_REMOTE_SERVER"
+    SSH_PRIVATE_KEY: "$LIVE_SSH_PRIVATE_KEY"
+
+  before_script:
+    - echo "REMOTE_SERVER: $REMOTE_SERVER"
+    - echo "LIVE_REMOTE_SERVER: $LIVE_REMOTE_SERVER"
+    # Install and configure Docker (Optional - Not needed with Docker-in-Docker)
+    - docker -v
+    # Configure SSH for remote server access
+    - mkdir -p ~/.ssh
+    - echo "$LIVE_SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan $LIVE_REMOTE_SERVER >> ~/.ssh/known_hosts
+
+  script:
+    # Deploy the Docker image to the remote server
+    - echo "Deploying Docker image to $LIVE_REMOTE_SERVER ..."
+
+
