@@ -1,0 +1,17 @@
+.list__item {
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: block;
+        background-color: var(--color-green);
+        position: absolute;
+        top: 8px;
+        left: 0%;
+    }
+}
+

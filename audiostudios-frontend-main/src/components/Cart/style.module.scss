@@ -1,0 +1,21 @@
+.stuido__card {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+
+    
+    .caption { 
+
+        .title__box {
+            width: calc(100% - 50px);
+        }
+        .icon__box {
+            width: 50px;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+     
+}

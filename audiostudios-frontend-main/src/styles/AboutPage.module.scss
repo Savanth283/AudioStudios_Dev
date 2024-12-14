@@ -1,0 +1,11 @@
+.check__list {
+    li {
+        padding-left: 2rem;position: relative;margin-bottom: .75rem;
+
+        &::before {
+            content: '';width: 1.25rem;height: 1.25rem;
+            position: absolute;top: 0.25;left: 0%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIGZpbGw9IiMzMENFQzAiLz4KPHBhdGggZD0iTTUgMTAuMzk4OUw2LjE0ODg3IDkuMjVMOC4yNTMyNSAxMS4zNTM2TDEzLjYwNjggNkwxNC43NTU3IDcuMTQ4ODdMOC4yNTI0NCAxMy42NTEzTDUgMTAuMzk4OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=') no-repeat center center / 1.25rem;
+        }
+    }
+}
